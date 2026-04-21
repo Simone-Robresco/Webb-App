@@ -1,27 +1,16 @@
-# Webb-App ITIS — Schema del Progetto
+REQUESITI FUNZIONALI:
 
-## Descrizione
+- Autenticazione e accesso
+    -  registrazione solo con mail istituzionale
+    -  verifica validita tramite email di conferma
+    -  Gestione prodotti(cards) -> Nella schermata home ci devono essere tutte le card dei prodotti in modo che siano 4 per riga 
 
-Piattaforma web simile a **subito.it**, dedicata esclusivamente agli studenti dell'ITIS.
-Consente agli studenti di pubblicare e acquistare prodotti tra di loro all'interno della scuola.
+REQUISITI IN PIU':
 
----
+- (Notifiche)
+- (Gestione profilo)
+- (chat utenti sulla mail, gli utenti per le trattative comunicheranno tramite la mail istituzionale)
 
-## Requisiti Funzionali
 
-### 1. Autenticazione e Accesso
-- Registrazione consentita **solo con mail istituzionale** (es. `@itis...`)
-- Verifica dell'account tramite **email di conferma**
 
-### 2. Gestione Prodotti
-- Ogni prodotto è rappresentato da una **card** con immagine, titolo, prezzo e venditore
-- Nella schermata home le card sono disposte in una griglia **4 per riga**
-- Gli studenti possono **pubblicare**, **modificare** ed **eliminare** i propri annunci
-
----
-
-## Requisiti Aggiuntivi *(opzionali / futuri)*
-
-- **Notifiche** — avvisi per nuovi messaggi o interazioni sui propri annunci
-- **Gestione profilo** — pagina personale con annunci pubblicati e dati utente
-- **Trattative via mail** — gli utenti comunicano tramite la mail istituzionale per accordarsi sull'acquisto
+Creazione di un sito web simile a subito.it che sia a disposizione degli studenti di una scuola in particolare (itis).
