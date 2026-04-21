@@ -1,0 +1,7 @@
+RUOLI DISPONIBILI:
+
+- Gestione utenti (basta cambiare con solo mail istituzionale)(venditore <-> compratore)
+- gestione DB
+- Gestione compravendita di oggetti
+- Grafica (html, CSS)
+- Relazione/Presentazione
