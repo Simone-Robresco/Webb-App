@@ -1,45 +1,80 @@
-REQUESITI FUNZIONALI:
+# Schema del Progetto — Webb-App ITIS
 
-- Autenticazione e accesso
-    -  registrazione solo con mail istituzionale
-    -  verifica validita tramite email di conferma
-    -  Gestione prodotti(cards) -> Nella schermata home ci devono essere tutte le card dei prodotti in modo che siano 4 per riga 
+Creazione di un sito web simile a **subito.it**, dedicato esclusivamente agli studenti dell'ITIS.
+Gli studenti possono pubblicare, acquistare e vendere oggetti all'interno della scuola.
 
-REQUISITI IN PIU':
+---
 
-- (Notifiche)
-- (Gestione profilo)
-- (chat utenti sulla mail, gli utenti per le trattative comunicheranno tramite la mail istituzionale)
+## Requisiti Funzionali
 
+### Autenticazione e Accesso
+- Registrazione consentita solo con **mail istituzionale**
+- Verifica account tramite **email di conferma**
+- Ruoli: **venditore** e **compratore** (gestibili dallo stesso account)
+- Account admin: `robre`, `boriz`, `fino`, `sara`, `gondy`
 
+### Gestione Prodotti
+- Nella home le card dei prodotti sono disposte in una griglia **4 per riga**
+- Ogni utente può **creare**, **modificare** ed **eliminare** i propri annunci
+- Visualizzazione e acquisto dei prodotti disponibili
 
-Creazione di un sito web simile a subito.it che sia a disposizione degli studenti di una scuola in particolare (itis).
+---
 
+## Requisiti Aggiuntivi *(opzionali / futuri)*
 
+- **Notifiche** — avvisi per nuove interazioni sugli annunci
+- **Gestione profilo** — pagina personale dell'utente
+- **Trattative via mail** — acquirente e venditore si accordano tramite mail istituzionale
 
-RUOLI DISPONIBILI:
+---
 
-- Gestione utenti:
-    - basta cambiare con solo mail istituzionale per register e login
-    - venditore <-> compratore
-    - account admin nostri(robre, boriz, fino, sara, gondy)
+## Schema Database
 
-    
-- gestione DB (ROBRE):
-    - UTENTI: (id_utente, username, nome, cognome,  email, password, anno_scuola, indirizzo)
-    - PRODOTTI: (id_prodotto, prezzo, descrizione, data_pubblicazione, status(0 -> venduto, 1->disponibile))
-    - TRANSAZIONI: (id_transazione, id_utente_compra, id_utente_vende, id_prodotto)
-    - RECENSIONI: (id_recensione, id_utente_scrive, id_utente_riceve, recensione)
+### Tabella `UTENTI`
+| Campo | Tipo |
+|---|---|
+| id_utente | INT (PK) |
+| username | VARCHAR |
+| nome | VARCHAR |
+| cognome | VARCHAR |
+| email | VARCHAR |
+| password | VARCHAR |
+| anno_scuola | INT |
+| indirizzo | VARCHAR |
 
-    
-- Gestione compravendita di oggetti:
-    - creare, modificare, eliminare annunci
-    - visualizzazione + aquisto di prodotti
+### Tabella `PRODOTTI`
+| Campo | Tipo |
+|---|---|
+| id_prodotto | INT (PK) |
+| prezzo | DECIMAL |
+| descrizione | TEXT |
+| data_pubblicazione | DATE |
+| status | TINYINT (`0` = venduto, `1` = disponibile) |
 
+### Tabella `TRANSAZIONI`
+| Campo | Tipo |
+|---|---|
+| id_transazione | INT (PK) |
+| id_utente_compra | INT (FK) |
+| id_utente_vende | INT (FK) |
+| id_prodotto | INT (FK) |
 
-- Grafica (html, CSS):
-    - CLAUDE
+### Tabella `RECENSIONI`
+| Campo | Tipo |
+|---|---|
+| id_recensione | INT (PK) |
+| id_utente_scrive | INT (FK) |
+| id_utente_riceve | INT (FK) |
+| recensione | TEXT |
 
-- Relazione/Presentazione:
-    - Canva
-    - docx
+---
+
+## Ruoli del Gruppo
+
+| Ruolo | Responsabile |
+|---|---|
+| Gestione utenti | — |
+| Gestione DB | ROBRE |
+| Gestione compravendita | — |
+| Grafica (HTML/CSS) | CLAUDE |
+| Relazione/Presentazione | Canva, DOCX |
