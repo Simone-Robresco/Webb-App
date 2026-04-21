@@ -41,6 +41,5 @@ RUOLI DISPONIBILI:
     - CLAUDE
 
 - Relazione/Presentazione:
-    -
-    -
-    -
+    - Canva
+    - docx
