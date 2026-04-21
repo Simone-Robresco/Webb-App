@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh pr create --title 'Formatta e riorganizza schema.md' --body ' *)",
+      "Bash(where gh *)",
+      "Bash(winget list *)"
+    ]
+  }
+}
