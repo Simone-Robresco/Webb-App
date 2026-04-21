@@ -1,0 +1,289 @@
+/* Reset e impostazioni base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #ff8c42 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #333;
+    padding-bottom: 50px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+header h2 {
+    color: white;
+    text-align: center;
+    background-color: transparent;
+    padding: 2rem;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+/* Navigazione */
+cd {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+cd a {
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 2rem;
+    background: linear-gradient(135deg, #d32f2f, #c62828);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+}
+
+cd a:hover {
+    background: linear-gradient(135deg, #c62828, #b71c1c);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+}
+
+/* Sezione centrale */
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+section div {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem 3.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    font-size: 1.4rem;
+    color: #1e293b;
+    margin: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+}
+
+/* Form */
+form {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+    max-width: 450px;
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #ff6b35;
+    box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.1);
+    transform: translateY(-2px);
+}
+
+input[type="submit"],
+input[type="button"] {
+    background: linear-gradient(135deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+    background: linear-gradient(135deg, #f7931e, #ff8c42);
+}
+
+input[type="submit"]:active,
+input[type="button"]:active {
+    transform: translateY(-1px);
+}
+
+/* Link pulsanti - IMPORTANTE: nessuna larghezza fissa */
+a {
+    text-decoration: none;
+    display: block;
+    margin: 0 auto;
+    max-width: 450px;
+    width: 90%;
+}
+
+a input[type="button"] {
+    background: linear-gradient(135deg, #ff8c42, #ffa726);
+    box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+}
+
+a input[type="button"]:hover {
+    box-shadow: 0 8px 20px rgba(255, 140, 66, 0.4);
+    background: linear-gradient(135deg, #ffa726, #ffb74d);
+}
+
+/* Messaggi di errore */
+form div {
+    background: linear-gradient(135deg, #fee2e2, #fecaca);
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-top: 1.5rem;
+    border-left: 5px solid #ef4444;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.1);
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+}
+
+footer p {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    color: white;
+    text-align: center;
+    padding: 0.8rem;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h2 {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+    
+    form {
+        padding: 2rem;
+        margin: 1rem;
+    }
+    
+    section div {
+        padding: 2rem;
+        font-size: 1.2rem;
+    }
+    
+    footer p {
+        font-size: 0.75rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Animazioni */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+form, section div, a {
+    animation: fadeIn 0.6s ease-out;
+}
+
+header {
+    animation: slideIn 0.5s ease-out;
+}
+
+/* Effetto glass morphism */
+form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.5), rgba(255,255,255,0.1));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+}
