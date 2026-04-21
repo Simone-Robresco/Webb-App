@@ -3,10 +3,10 @@ session_start();
 session_unset();
 session_destroy();
 
-include('./template/header.php');
+include('./codice/template/header.php');
 ?>
 
-<form method="POST" action="./php/logincheck.php">
+<form method="POST" action="./codice/php/logincheck.php">
 
   <label for="utente">👤 Nome Utente</label>
   <input type="text" id="utente" name="utente" placeholder="Inserisci il tuo username">
@@ -33,5 +33,5 @@ if(isset($_GET['msg'])){
 
 
 <?php
-include './template/footer.php';
+include './codice/template/footer.php';
 ?>
