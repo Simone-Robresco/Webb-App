@@ -39,6 +39,7 @@ Gli studenti possono pubblicare, acquistare e vendere oggetti all'interno della 
 | cognome | VARCHAR |
 | email | VARCHAR |
 | password | VARCHAR |
+| nome_scuola | VARCHAR |
 | anno_scuola | INT |
 | indirizzo | VARCHAR |
 
@@ -73,8 +74,8 @@ Gli studenti possono pubblicare, acquistare e vendere oggetti all'interno della 
 
 | Ruolo | Responsabile |
 |---|---|
-| Gestione utenti | — |
+| Gestione utenti | GONDY |
 | Gestione DB | ROBRE |
-| Gestione compravendita | — |
-| Grafica (HTML/CSS) | CLAUDE |
+| Gestione compravendita | FINO |
+| Grafica (HTML/CSS) |  |
 | Relazione/Presentazione | Canva, DOCX |
