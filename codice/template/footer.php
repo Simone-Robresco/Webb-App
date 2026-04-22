@@ -1,5 +1,5 @@
 <footer>
-    <p>© Progetto PHP | Borello</p>
+    <p>© SwappITIS</p>
 </footer>
 </body>
 </html>

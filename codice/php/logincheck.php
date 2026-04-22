@@ -1,19 +1,8 @@
 <?php
 include('../conf/db_config.php');
 
-//$_POST['utente'];   contengono le info prese dal post/get
-//$_POST['password'];
-//$_GET['utente'];
-//$_GET['password'];
-/*
-print_r($_POST);    
-
-echo "<div>scusami, il tuo utente è: ".$_POST['utente']."</div>";   //dentro echo scrivo html e con i .. concateno le variabili
-*/
-
-// prepare statement
-$stmt = $conn->prepare("SELECT * FROM utenti WHERE user = ? AND psw = ?");  //prepare la query
-$stmt->bind_param("ss", $_POST['utente'], $_POST['password']); //evita sequel injection (trasforma i caratteri speciali in stringa)
+$stmt = $conn->prepare("SELECT * FROM utenti WHERE email = ? AND password = ?");  //prepare la query
+$stmt->bind_param("ss", $_POST['email'], $_POST['password']); //evita sequel injection (trasforma i caratteri speciali in stringa)
 $stmt->execute();
 
 //salvataggio dei dati di una singola riga

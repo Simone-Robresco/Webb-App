@@ -6,18 +6,24 @@ include('./conf/db_config.php');
 <section style="text-align: center;">
 
 <?php
+$result = $conn->query("SELECT * FROM prodotti WHERE status = 1");
 
-$stmt = $conn->prepare("SELECT count(*) as totale_giorni FROM assenze WHERE utente_id = ?");
-$stmt->bind_param("s", $_SESSION['id']);
-$stmt->execute();
-
-$result = $stmt->get_result();
-$row = $result->fetch_assoc(); 
-
-echo "<div>📅 Giorni di Assenza Registrati: <strong>" . $row['totale_giorni'] . "</strong></div>";
-
+while($prodotto = $result->fetch_assoc()) {
 ?>
-
+    <div style="width: 22%; border: 1px solid #ccc; border-radius: 10px; padding: 10px; text-align: center;">
+        <h3><?php echo $prodotto['descrizione']; ?></h3>
+        
+        <p>Prezzo: <?php echo $prodotto['prezzo']; ?>€</p>
+        
+        <p>Pubblicato il: <?php echo $prodotto['data_pubblicazione']; ?></p>
+        
+        <a href="./php/dettaglio_prodotto.php?id=<?php echo $prodotto['id_prodotto']; ?>">
+            <button>Vedi prodotto</button>
+        </a>
+    </div>
+<?php
+}
+?>
 </section>
 
 <?php

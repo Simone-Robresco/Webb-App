@@ -75,6 +75,7 @@ Gli studenti possono pubblicare, acquistare e vendere oggetti all'interno della 
 | Ruolo | Responsabile |
 |---|---|
 | Gestione utenti | GONDY |
+| Gestione register/login | BORIZ |
 | Gestione DB | ROBRE |
 | Gestione compravendita | FINO |
 | Grafica (HTML/CSS) |  |
