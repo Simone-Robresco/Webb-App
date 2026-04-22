@@ -1,4 +1,4 @@
-# Webb-App ITIS
+# SwappITIS
 
 Piattaforma web per studenti dell'ITIS, simile a **subito.it**, che permette di comprare e vendere oggetti all'interno della scuola.
 
